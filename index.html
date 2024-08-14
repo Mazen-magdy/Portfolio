@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazen</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/79904cb93e.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./output.css"> -->
+</head>
+<body class="dark !w-full">
+    <nav class=" flex w-full flex-row justify-between items-center fixed z-10 px-14 py-4 deg d600c" style="padding-left: 5%; padding-right: 5%;">
+        <h2 class="font-bold ">&lt; MM /&gt;</h2>
+        <ul class="flex w-2/3 flex-row justify-evenly items-center  hidden md:flex">
+            <li class="text-center h-2/2  list  	font-bold"><a href="#About">About</a></li>
+            <li class="text-center h-2/2  list	font-bold" id=""><a href="./Testimonials.html" target="_blank">Testimonials</a></li>
+            <li class="text-center h-2/2  list	font-bold" ><a href="#Contact">Contact</a></li>
+            <li class="h-1/2 flex align-center">
+                <!-- icon -->
+                 <button class="text-left p-2 md-text-center text-lg pl-5"  style="border-left: 1px solid var(--d100-gray);" id="mode"><img src="./images/Name=icon-dark-mode, Size=32, Theme Mode=Dark.png" class="size-7    "></button>
+            </li>
+            <button class="d900g d50c rounded-lg px-3 p-1 text-lg"><a href="./Resume-Mazen-Magdy--Hussine-.pdf" download class="">Download CV</a></button>
+        </ul>
+        <div class=" md:hidden absolute right-6 cursor-pointer" id="menu"><i class="fa-solid fa-bars"></i></div>
+        <div class="hidden md:hidden absolute right-6" id="close"><button><i class="fa-solid fa-circle-xmark"></i></button></div>
+
+
+    </nav>
+    <div class="!w-full " >
+    <section id="first About" class="flex flex-col flex-col-reverse  md:flex-row  justify-evenly  items-center deg py-20  px-14 d950c" style="height: auto">
+        <div class="flex flex-col justify-between align-start text-center md:text-left w-5/5 md:w-3/5 ">
+            <div>
+                <h1 class=" font-bold mb-2 !text-normal ">Hi, I'm Mazen</h1>
+                <h5 class="text-left font-normal mb-4 text-justify "> I’m a passionate Front-end developer with a keen interest in programming. I enjoy exploring new technologies and creating innovative web solutions. My expertise includes CSS3, HTML5,Javascript,Tailwind CSS,debugging code and Problem solving. I’m always eager to learn and improve my skills. In my free time, I love working on personal website projects and staying updated with the latest trends in web development.</h5>
+            </div>
+            <div class="mb-6">
+                 <h6> <i class="fa-solid fa-location-dot mr-2 w-0.5 h-1"></i> Assiut Egypt</h6>
+                <h6 class="flex items-center justify-center md:justify-normal ">  <span class="block w-1 h-1 rounded-full text-center emeg mr-2 " ></span>  Availble for new projects</h6>
+            </div>
+            <div>
+                <a href="https://github.com/Mazen-magdy" target="_blank" class="hover:text-red-300"><i class="fa-brands fa-github " style="font-size: xx-large; "></i></a>
+                <a href="https://www.linkedin.com/in/mazen-magdy-hussine-15169b1ab/" target="_blank" class="hover:text-red-300"><i class="fa-brands fa-linkedin-in pl-5" style="font-size: xx-large; "></i></a>
+            </div>
+        </div>
+        <img src="./images/2.jpeg" alt=""  class="mb-8 self-center !w-4/5 md:!w-3/12 " id="Picture" style="width: 30% ; height: 90%; box-shadow: 30px 30px 0px  var(--d200-gray);">
+    </section>
+    <section id="second" class="flex flex-col items-center justify-center d50g h-auto px-14  pt-2">
+        <div class=" flex flex-col items-center justify-center">
+            <p class=" w-20 text-center font-semibold px-2 py-1 mb-2 rounded-full deg d950c">Skill</p>
+            <h5 class=" w-full text-center font-semibold px-2 py-1 mb-2 body1  d950c">The skills, tools and technologies I am really good at:</h5>
+        
+            <div id="skills" class="flex flex-row items-center flex-wrap px-20 p-5 justify-center">  
+                <!-- will be created by js -->
+            </div>
+        </div>
+    </section>
+     <section id="projects" class="deg flex flex-col items-center   px-28 py-4">
+        <p class="rounded-full font-semibold mb-4 d950c d50g py-1 px-4">Projects</p>
+            <!-- Will be created by js -->
+
+    </section>
+    <section id="Contact" class="d50g flex flex-col items-center py-2 px-14 d950c">
+        <p class=" w-26 text-center font-semibold px-2 py-1 mb-2 rounded-full deg d950c">Get in touch</p>
+        <h5 class="p-2">What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to connect.</h5>
+        <h3 class="p-2 "><i class="fa-regular fa-envelope"></i><p class=" pl-2 hidden md:!inline-block"> mm1759467@gmail.com </p> <button id="email"><i class="fa-solid fa-copy"></button></i> <span class="px-5 translate-x-2  d300g d950c text-sm absolute hidden " id="copiedmail">copied!</span></h3>
+        <h3 class="p-2"><i class="fa-solid fa-phone"></i><p class=" pl-2 hidden md:!inline-block"> 01016359580 </p> <button id="phone"><i class="fa-solid fa-copy"></i></button> <span class="px-5 translate-x-2  d300g d950c text-sm absolute hidden " id="copiedphone">copied!</span></h3>
+        <div class="py-2">
+            <a href="https://github.com/Mazen-magdy" target="_blank"><i class="fa-brands fa-github " style="font-size: xx-large; "></i></a> 
+            <a href="https://www.linkedin.com/in/mazen-magdy-hussine-15169b1ab/" target="_blank"><i class="fa-brands fa-linkedin-in pl-5" style="font-size: xx-large; "></i></a>
+        </div>
+    </section>
+    <footer class="deg py-12">
+        <h4 class="text-center">© 2024 | coded with ❤️️ by Mazen-magdy</h4>
+    </footer>
+</div>
+</body>
+<script src="./app.js"></script>
+</html>
