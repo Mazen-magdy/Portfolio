@@ -166,4 +166,10 @@ p , li{
         --emerold :#10b981;
     }
     
-    
+    #projects{
+        animation: show forwards scr;
+    }
+    @keyframes show{
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }

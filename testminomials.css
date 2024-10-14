@@ -1,0 +1,21 @@
+
+.testimonial{
+    visibility: hidden;
+    transform: translateY(-100%);
+
+}
+.testimonial.animate{
+    animation: appearing  forwards linear ;
+    animation-duration: 0.5s;
+}
+@keyframes appearing{
+    form{
+    }
+    to{
+        transform: translateY(0);
+        visibility: visible;
+        
+    }
+}
+  
+  

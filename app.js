@@ -1,6 +1,24 @@
 
 // --------------------------------------------- tracking the light and dark mode  --------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
+    let Body = document.getElementsByTagName('body')[0]
+    let Default = localStorage.getItem('theme')
+    if(Default == undefined){
+        localStorage.setItem('theme', 'dark');
+    }
+    else{
+    if(Default == 'light'){ 
+        Body.classList.remove('dark');
+        Body.classList.add(Default);
+        console.log('Theme:', 'light');}
+    else{ 
+        Body.classList.remove('light');
+        Body.classList.add(Default);
+        console.log('Theme:', 'dark');}
+    }
+})
+
+document.addEventListener('DOMContentLoaded', function() {
     const preferredColorScheme = getPreferredColorScheme();
     if (preferredColorScheme === 'dark') {
         document.body.classList.add('dark');
@@ -104,7 +122,7 @@ console.log(nav);
 // ---------------------------------------------  Creating the projects section  --------------------------------------------
     document.addEventListener('DOMContentLoaded', function() {
         let projects = document.getElementById('projects');                                                        // Get the projects container
-        let projectsn = 3;                                                                                         // Number of projects to display
+       
         let projectsobj = [                                                                                       // Array of projects to display
             { name: 'Random Quote Generator',
               imgsrc: './images/Quate Gen.png',
@@ -120,13 +138,30 @@ console.log(nav);
               imgsrc: './images/resturant temp.png',
               introduction: 'This is a simple web page that displays a restaurant landing page.',
               skills: ['HTML5', 'CSS3'],
-              link: ''},
+              link: 'resturanttemp.rf.gd'},
+              { name: 'ip-address-tracker',
+              imgsrc: './images/map.png',
+              introduction: 'This is a site that displays the location of a sipicific ip .',
+              skills: ['HTML5', 'CSS3','tailwind css', 'JS'],
+              link: 'http://iptracker.rf.gd/?i=3'},
+              { name: '2048 Game',
+              imgsrc: './images/2048.png',
+              introduction: '',
+              skills: ['HTML5', 'CSS3', 'JS'],
+              link: 'https://mazen-magdy.github.io/2048-Game/'},
+              { name: 'Memory Game',
+                imgsrc: './images/memory.png',
+                introduction: '',
+                skills: ['HTML5', 'CSS3', 'JS'],
+                link: 'https://mazen-magdy.github.io/memory-Game/'},
+              
                           ];    
+         let projectsn = projectsobj.length;                                                                                         // Number of projects to display
         for(let i = 0 ; i<projectsn ; i++){
             let project = document.createElement('div');                                                      // Create a div element for each project                  
-           project.className = 'rounded-lg overflow-hidden w-full md:!w-4/5  d950g flex flex-col md:!flex-row mb-4';                       // Add classes to the project div
+           project.className = 'rounded-lg overflow-hidden w-full md:!w-full  d950g flex flex-col md:!flex-row mb-4';                       // Add classes to the project div
            let imgcontainer = document.createElement('div');                                               // Create a div element for the image container 
-           imgcontainer.className = 'w-full md:!w-1/2 h-auto overflow-hidden py-4 d50g flex justify-center items-center';                                                               // Add classes to the image container
+           imgcontainer.className = 'w-full md:!w-full h-auto overflow-hidden py-4 d50g flex justify-center items-center';                                                               // Add classes to the image container
            let img = document.createElement('img');                                                        // Create an img element for the image                
             img.className = 'object-contain rounded-lg';                                                                        // Add classes to the image         
             img.src = projectsobj[i].imgsrc;                                                              // Add the source to the image   
@@ -163,7 +198,6 @@ console.log(nav);
             link.appendChild(linkcontent);                                         // Append the link content to the link
             textcontainer.appendChild(s);                                                          // Append the skills to the project div                     
             textcontainer.appendChild(link);                                       // Append the link to the project div
-            
             projects.appendChild(project);                                                  // Append the project div to the projects container                     
          }
     });
