@@ -135,7 +135,7 @@ console.log(nav);
               skills: ['HTML5', 'CSS3', 'JavaScript'],
               link: 'https://todol.rf.gd/'},
             { name: 'A Simple web page',
-              imgsrc: './images/resturant temp.png',
+              imgsrc: './images/resturant Temp.png',
               introduction: 'This is a simple web page that displays a restaurant landing page.',
               skills: ['HTML5', 'CSS3'],
               link: 'resturanttemp.rf.gd'},
