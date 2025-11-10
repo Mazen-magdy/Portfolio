@@ -133,7 +133,9 @@ console.log(nav);
               imgsrc: './images/To Do list.png',
               introduction: 'This is a simple web page that allows you to add, delete, and filter tasks. The tasks are stored in the local storage.',
               skills: ['HTML5', 'CSS3', 'JavaScript'],
-              link: 'https://mazen-magdy.github.io/To-Do-list/'},    
+              link: 'https://mazen-magdy.github.io/To-Do-list/'},
+    
+
               { name: '2048 Game',
               imgsrc: './images/2048.png',
               introduction: '',
@@ -153,7 +155,7 @@ console.log(nav);
            let imgcontainer = document.createElement('div');                                               // Create a div element for the image container 
            imgcontainer.className = 'w-full md:!w-full h-auto overflow-hidden py-4 d50g flex justify-center items-center';                                                               // Add classes to the image container
            let img = document.createElement('img');                                                        // Create an img element for the image                
-            img.className = 'object-contain rounded-lg';                                                                        // Add classes to the image         
+            img.className = 'object-contain rounded-lg ';                                                                        // Add classes to the image         
             img.src = projectsobj[i].imgsrc;                                                              // Add the source to the image   
             imgcontainer.appendChild(img);                                                                // Append the image to the image container
             project.appendChild(imgcontainer);                                                                    // Append the image to the project div                       

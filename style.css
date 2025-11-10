@@ -1,3 +1,14 @@
+body{
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-family: 'Lato', sans-serif;
+}
+
+.deg, .d50g, .d100g, .d200g, .d300g, .d400g, .d500g, .d600g, .d700g, .d800g, .d900g, .d950g, .emeg,
+.dec, .d50c, .d100c, .d200c, .d300c, .d400c, .d500c, .d600c, .d700c, .d800c, .d900c, .d950c,
+h1, h2, h3, h4, p, li, a, button {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
 body.dark{
     --default-gray:#030712;
     --d50-gray:#111827;
@@ -137,39 +148,62 @@ p , li{
     color: var(--d600-gray);
 }
 #projects div:first-child img{
- height: 90%;
- width: 80%;
+    height: 90%;
+    width: 80%;
+    transition: transform 0.25s linear;
 }
 #projects div:first-child img:hover{
-    animation: sizing 0.25s forwards linear;
+    transform: scale(1.1);
+    /* animation: sizing 0.25s forwards linear; */
 }
 #logo{
-    animation: sizing 0.25s forwards linear;
-}
-@keyframes sizing{
-    to{transform: scale(1.1);}
+    transform: scale(1.1);
+    /* animation: sizing 0.25s forwards linear; */
 }
 
-    body.light{
-        --default-gray:#ffffff;
-        --d50-gray:#f9fafb;
-        --d100-gray:#f3f4f6;
-        --d200-gray:#e5e7eb;
-        --d300-gray:#d1d5db;
-        --d400-gray:#9ca3af;
-        --d500-gray:#6b7280;
-        --d600-gray:#4b5563;
-        --d700-gray:#374151 ;
-        --d800-gray:#1f2937;
-        --d900-gray:#111827;
-        --d950-gray:#030712;
-        --emerold :#10b981;
+body.light{
+    --default-gray:#ffffff;
+    --d50-gray:#f9fafb;
+    --d100-gray:#f3f4f6;
+    --d200-gray:#e5e7eb;
+    --d300-gray:#d1d5db;
+    --d400-gray:#9ca3af;
+    --d500-gray:#6b7280;
+    --d600-gray:#4b5563;
+    --d700-gray:#374151 ;
+    --d800-gray:#1f2937;
+    --d900-gray:#111827;
+    --d950-gray:#030712;
+    --emerold :#10b981;
+}
+
+#projects{
+    animation: show forwards scr;
+}
+@keyframes show{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.photo{
+    /* animation shorthand: name | duration | timing-function | delay | iteration-count | direction | fill-mode | play-state */
+    animation: moving 1s ease-out forwards;
+}
+@keyframes moving {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
     }
-    
-    #projects{
-        animation: show forwards scr;
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
-    @keyframes show{
-        from{opacity: 0;}
-        to{opacity: 1;}
-    }
+}
+.regarding{
+    animation : blink 2s ease-in-out infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% {
+        transform: translateY(-5px);
+        opacity: 0.3; }
+}

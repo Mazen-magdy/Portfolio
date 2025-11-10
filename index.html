@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <meta name="description" content="personal portfolio website of Mazen Magdy Hussine">
+    <meta name="keywords" content="HTML, CSS, JavaScript, website, web development, front-end, portfolio">
+    <meta name="author" content="Mazen Magdy Hussine">
     <title>Mazen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/79904cb93e.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="./output.css"> -->
+
 </head>
 <body class="dark !w-full">
     <nav class=" flex w-full flex-row justify-between items-center fixed z-10 px-14 py-4 deg d600c" style="padding-left: 5%; padding-right: 5%;">
-        <h2 class="font-bold ">&lt; MM /&gt;</h2>
+        <h2 class="font-bold cursor-pointer transition-transform hover:scale-110">&lt; MM /&gt;</h2>
         <ul class="flex w-2/3 flex-row justify-evenly items-center  hidden md:flex">
-            <li class="text-center h-2/2  list  	font-bold"><a href="#About">About</a></li>
-            <li class="text-center h-2/2  list	font-bold" ><a href="#Contact">Contact</a></li>
+            <li class="text-center rounded-lg h-2/2 p-2 list inline-block transition-transform hover:scale-110 hover:bg-white hover:text-black font-bold"><a href="#About">About</a></li>
+
+            <li class="text-center rounded-lg h-2/2 p-2 list inline-block transition-transform hover:scale-110 hover:bg-white hover:text-black font-bold"><a href="#Contact">Contact</a></li>
             <li class="h-1/2 flex align-center">
                 <!-- icon -->
-                 <button class="text-left p-2 md-text-center text-lg pl-5"  style="border-left: 1px solid var(--d100-gray);" id="mode"><img src="./images/Name=icon-dark-mode, Size=32, Theme Mode=Dark.png" class="size-7    "></button>
+                <button class="text-left p-2 md-text-center text-lg pl-5  inline-block transform transition-transform duration-50 hover:scale-110" style="border-left: 1px solid var(--d100-gray);" id="mode">
+                    <i class="fa-solid fa-moon fa-2xl d950-gray"></i>
+                </button>
             </li>
-            <button class="d900g d50c rounded-lg px-3 p-1 text-lg"><a href="./Resume-Mazen-Magdy--Hussine-.pdf" download class="">Download CV</a></button>
+            <a href="./Resume-Mazen-Magdy--Hussine-.pdf" download class="d900g d50c rounded-lg px-3 p-1 text-lg transition-transform transform duration-200 hover:scale-110 inline-block">
+                Download CV
+            </a>
         </ul>
         <div class=" md:hidden absolute right-6 cursor-pointer" id="menu"><i class="fa-solid fa-bars"></i></div>
         <div class="hidden md:hidden absolute right-6" id="close"><button><i class="fa-solid fa-circle-xmark"></i></button></div>
@@ -30,23 +41,23 @@
     <section id="first About" class="flex flex-col flex-col-reverse  md:flex-row  justify-evenly  items-center deg py-20  px-14 d950c" style="height: auto">
         <div class="flex flex-col justify-between align-start text-center md:text-left w-5/5 md:w-3/5 ">
             <div>
-                <h1 class=" font-bold mb-2 !text-normal ">Hi, I'm Mazen</h1>
+                <h1 class=" font-bold mb-2 !text-normal regarding">Hi, I'm Mazen</h1>
                 <h5 class="text-left font-normal mb-4 text-left "> I’m a passionate Front-end developer with a keen interest in programming. I enjoy exploring new technologies. My expertise includes CSS3, HTML5,Javascript,Tailwind CSS, debugging code and Problem solving. I’m always eager to learn and improve my skills. In my free time, I love working on personal website.</h5>
             </div>
             <div class="mb-6">
-                 <h6> <i class="fa-solid fa-location-dot mr-2 w-0.5 h-1"></i> Assiut Egypt</h6>
-                <h6 class="flex items-center justify-center md:justify-normal ">  <span class="block w-1 h-1 rounded-full text-center emeg mr-2 " ></span>  Availble for new projects</h6>
+                <div class="flex flex-row justify-left align-center transition-transform hover:scale-110 w-40 cursor-pointer"> <h6 > <i class="fa-solid fa-location-dot mr-3 w-0.5 h-1"> </i> Assiut Egypt</h6></div>
+                <div  class="flex flex-row justify-left align-center transition-transform hover:scale-110 w-60 cursor-pointer "><h6 ><i class="fa-solid fa-location-dot mr-3 w-0.5 h-1"> </i> Available for new projects</h6></div>
             </div>
             <div>
-                <a href="https://github.com/Mazen-magdy" target="_blank" class="hover:text-red-300"><i class="fa-brands fa-github " style="font-size: xx-large; "></i></a>
-                <a href="https://www.linkedin.com/in/mazen-magdy-hussine-15169b1ab/" target="_blank" class="hover:text-red-300"><i class="fa-brands fa-linkedin-in pl-5" style="font-size: xx-large; "></i></a>
+                <a href="https://github.com/Mazen-magdy"   target="_blank"><i class="fa-brands transform transition-transform hover:scale-110 fa-github " style="font-size: xx-large; "></i></a>
+                <a href="https://www.linkedin.com/in/mazen-magdy-hussine-15169b1ab/"  target="_blank"><i class="fa-brands transform transition-transform hover:scale-110 fa-linkedin-in pl-5" style="font-size: xx-large; "></i></a>
             </div>
         </div>
-        <img src="./images/2.jpeg" alt=""  class="mb-8 self-center !w-4/5 md:!w-3/12 " id="Picture" style="width: 30% ; height: 90%; box-shadow: 30px 30px 0px  var(--d200-gray);">
+        <img src="./images/2.jpeg" alt="personal-photo"  class="mb-8 self-center !w-4/5 md:!w-3/12 photo" id="Picture" style="width: 30% ; height: 90%; box-shadow: 30px 30px 0px  var(--d200-gray);">
     </section>
     <section id="second" class="flex flex-col items-center justify-center d50g h-auto px-14  pt-2">
         <div class=" flex flex-col items-center justify-center">
-            <p class=" w-20 text-center font-semibold px-2 py-1 mb-2 rounded-full deg d950c">Skill</p>
+            <p class=" w-20 text-center font-semibold px-2 py-1 mb-2 rounded-full deg d950c transition-colors hover:">Skill</p>
             <h5 class=" w-full text-center font-semibold px-2 py-1 mb-2 body1  d950c">The skills, tools and technologies I am really good at:</h5>
         
             <div id="skills" class="flex flex-row items-center flex-wrap px-20 p-5 justify-center">  
