@@ -28,9 +28,23 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(preferredColorScheme);
     const toggleButton = document.getElementById('mode');
     toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    document.body.classList.toggle('light');
-    
+    // add a short transition helper so color/background changes animate smoothly
+    document.documentElement.classList.add('theme-transition');
+    setTimeout(() => {
+        document.documentElement.classList.remove('theme-transition');
+    }, 500);
+
+    // toggle theme classes and persist preference
+    if (document.body.classList.contains('dark')) {
+        document.body.classList.remove('dark');
+        document.body.classList.add('light');
+        localStorage.setItem('theme', 'light');
+    } else {
+        document.body.classList.remove('light');
+        document.body.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+    }
+
     });
     
 });
@@ -133,7 +147,9 @@ console.log(nav);
               imgsrc: './images/To Do list.png',
               introduction: 'This is a simple web page that allows you to add, delete, and filter tasks. The tasks are stored in the local storage.',
               skills: ['HTML5', 'CSS3', 'JavaScript'],
-              link: 'https://mazen-magdy.github.io/To-Do-list/'},    
+              link: 'https://mazen-magdy.github.io/To-Do-list/'},
+    
+
               { name: '2048 Game',
               imgsrc: './images/2048.png',
               introduction: '',

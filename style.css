@@ -136,18 +136,16 @@ h4{
 p , li{
     color: var(--d600-gray);
 }
-#projects div:first-child img{
- height: 90%;
- width: 80%;
+/* Project images: remove keyframe animation and use smooth transition instead */
+#projects img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 260ms ease, box-shadow 260ms ease;
 }
-#projects div:first-child img:hover{
-    animation: sizing 0.25s forwards linear;
-}
-#logo{
-    animation: sizing 0.25s forwards linear;
-}
-@keyframes sizing{
-    to{transform: scale(1.1);}
+#projects img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
 
     body.light{
@@ -173,3 +171,83 @@ p , li{
         from{opacity: 0;}
         to{opacity: 1;}
     }
+
+/* Smooth theme transition helper: add this class to <html> or <body> briefly during theme changes */
+.theme-transition, .theme-transition * {
+    transition: background-color 450ms ease, color 450ms ease, border-color 450ms ease, box-shadow 350ms ease, transform 250ms ease;
+}
+
+/* Make FontAwesome icons interactive and smooth */
+.fa-brands, .fa-solid, .fa-regular {
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), color 220ms ease, filter 220ms ease;
+    will-change: transform, color;
+    cursor: pointer;
+}
+.fa-brands:hover, .fa-solid:hover, .fa-regular:hover {
+    transform: translateY(-4px) scale(1.08);
+    color: var(--emerold);
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.12));
+}
+
+/* Social / logo interactive sizing for small screens */
+.social-icon { display:inline-block; }
+.social-icon:hover { transform: translateY(-3px) scale(1.06); }
+
+/* Make profile photo hover subtle and smooth */
+.photo {
+    width: auto;
+    max-width: 340px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    will-change: transform;
+    /* vertical swing animation */
+    animation: swing 3.2s ease-in-out infinite;
+}
+
+/* restore default blocky shadow from original design and enable smooth transitions */
+.photo {
+    box-shadow: 30px 30px 0px var(--d200-gray);
+    transition: transform 350ms cubic-bezier(.2,.9,.2,1), box-shadow 350ms ease;
+}
+
+/* Mobile: make hero photo phone-friendly */
+@media (max-width: 640px) {
+    .photo {
+        width: 72%;
+        max-width: 240px;
+        box-shadow: 12px 12px 0px var(--d200-gray);
+        animation: swing-mobile 4s ease-in-out infinite;
+    }
+
+    @keyframes swing-mobile {
+        0% { transform: translateY(-4px); }
+        50% { transform: translateY(4px); }
+        100% { transform: translateY(-4px); }
+    }
+}
+
+@keyframes swing {
+    0% { transform: translateY(-8px); }
+    50% { transform: translateY(8px); }
+    100% { transform: translateY(-8px); }
+}
+
+/* When user hovers the photo, pause swinging and smoothly settle to the average position */
+.photo:hover {
+    animation-play-state: paused;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    transform: translateY(0);
+    box-shadow: 12px 12px 22px rgba(0,0,0,0.12);
+}
+
+/* Buttons and interactive links */
+button, a, .list, .rounded-full {
+    transition: transform 220ms ease, background-color 300ms ease, color 300ms ease;
+}
+button:hover, a:hover, .list:hover { transform: translateY(-3px); }
+
+/* Slightly more gentle transitions globally (fallback) */
+html, body {
+    transition: background-color 400ms ease, color 400ms ease;
+}
